@@ -6,16 +6,22 @@
 //
 
 import UIKit
-
+import Firebase
+import SVProgressHUD
+import SideMenu
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
+var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        return true
-    }
+        FirebaseApp.configure()
+        self.window = UIWindow.init(frame: UIScreen.main.bounds)
+       
+            return true
+        }
+    
 
     // MARK: UISceneSession Lifecycle
 
